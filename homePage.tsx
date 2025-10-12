@@ -1,11 +1,11 @@
 export default function HomePage() {
   return (
-    <section className="flex items-center text-white   justify-center min-h-screen bg-[#2a2a2a] ">
+    <section className="flex items-center text-white justify-center min-h-screen bg-[#2a2a2a] px-4 ">
       <div className="text-center max-w-3xl p-6 border-4 border-amber-500 rounded-sm">
-        <h1 className="text-6xl font-bold mb-10">
+        <h1 className="text-5xl md:text-6xl font-bold mb-8">
           Automation, AI Driven Solutions,Custom Software
         </h1>
-        <p className="text-lg mb-10">
+        <p className="text-lg md:text-xl mb-8">
           Building Robust and Scalable AI Integrated Solutions taloired to your
           bussiness needs
         </p>
