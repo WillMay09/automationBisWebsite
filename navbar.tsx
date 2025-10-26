@@ -3,37 +3,77 @@ import Link from "next/link";
 
 import { useState } from "react";
 
-import { Menu } from "lucide-react"; //for mobile icon
-
+import { Search, ChevronDown } from "lucide-react"; //for mobile icon
+//import {Button} from './ui/button';
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <nav className="sticky top-0 z-10  bg-[#4a4a4a] text-white px-8 py-4">
-      <div className="flex items-center justify-between">
-        {/*Logo*/}
-        <div className="text-xl font-bold tracking-tight mr-6">CLOUDZERO</div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#4a4a4a] backdrop-blur-sm border-b border-zinc-800 text-white">
+      {/* Large box */}
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          {/*Logo*/}
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-[#fe6036] to red-600 flex items-center justify-center">
+              <span>AI</span>
+            </div>
+            <span className="text-xl font-bold tracking-wider">CLOUDZERO</span>
+          </div>
 
-        {/* Links */}
-        <div className="hidden md:flex max-w-3xl justify-self-center space-x-15 text-sm font-medium">
-          <Link href="">Projects</Link>
-          <Link href="">Services</Link>
-          <Link href="">About</Link>
-          <Link href="">Testimonials</Link>
-          <Link href="">Pricing</Link>
-          <Link href="">Roadmap</Link>
-        </div>
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-8 font-medium text-white">
+            <Link
+              href="Why AI"
+              className=" hover: text-[#fe6036] transition-colors"
+            >
+              Why AI
+            </Link>
+            <Link
+              href="#Services"
+              className="flex items-center gap-1 hover: text-[#fe6036] transition-colors"
+            >
+              Services
+            </Link>
+            <Link
+              href="#Company"
+              className="flex items-center gap-1 hover: text-[#fe6036] transition-colors"
+            >
+              Company
+            </Link>
+            <Link
+              href="#Pricing"
+              className="flex items-center gap-1 hover: text-[#fe6036] transition-colors"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="#Roadmap"
+              className="flex items-center gap-1 hover: text-[#fe6036] transition-colors"
+            >
+              Roadmap
+            </Link>
+          </nav>
 
-        {/*Right Section*/}
-        <div className="hidden md:flex items-center space-x-4">
-          <Link href="" className="bg-[#4a4a4a] border-2 border-white">
-            Have a Question
-          </Link>
-          <Link href="" className="bg-[#fe6036] border-2 border-[#fe6036]">
-            Schedule a Demo
-          </Link>
+          {/* Actions */}
+
+          {/* <div className="hidden md:flex items-center space-x-4">
+            <Link href="" className="bg-[#4a4a4a] border-2 border-white">
+              Have a Question
+            </Link>
+            <Link href="" className="bg-[#fe6036] border-2 border-[#fe6036]">
+              Schedule a Demo
+            </Link>
+          </div> */}
+          {/*Custom button usage*/}
+          <div className="flex items-center gap-4">
+            <Link href="" className="bg-[#4a4a4a] border-2 border-white">
+              Have a Question
+            </Link>
+            <Link href="" className="bg-[#fe6036] border-2 border-[#fe6036]">
+              Schedule a Demo
+            </Link>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
